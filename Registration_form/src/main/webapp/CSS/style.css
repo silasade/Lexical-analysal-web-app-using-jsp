@@ -1,0 +1,117 @@
+@charset "ISO-8859-1";
+body{
+		background-image:url("${pageContext.request.contextPath}/images/bg-intro-desktop.png");
+		background-color: hsl(0, 100%, 74%) ;
+		
+	}
+	input{
+		border-radius:0.1cm;
+		border-color:black;
+	}
+	.head{
+		background-color: hsl(248, 32%, 49%);
+		color:white;
+		padding:5%;
+		padding-top:2%;
+		padding-bottom:2%;
+		border-radius: 0.3cm;
+		text-align:center;
+		box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+		-webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+		width:80%;
+	}
+	.main{
+		display:flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.error-message{
+		color:red;
+		text-align:right;
+		font-size:12px;
+		
+	}
+	.second{
+		color:white;
+		width:50%;
+	}
+	.form{
+		display:flex;
+		flex-direction:column;
+		width:35%;
+	}
+	form{
+		background-color: white;
+		border-radius: 0.2cm;
+		display:flex;
+		flex-direction:column;
+		height:90%;
+		padding:5%;
+		width:80%;
+		overflow: auto;
+		gap:8px;
+	}
+	#text-container {
+		font-size:26px;
+	    font-family: Arial, sans-serif;
+	   
+	    white-space: normal; /* Prevent text from wrapping */
+	        /* Hide overflowing text */
+	    border-right: 3px solid #333; /* Simulate typing cursor */
+    
+}
+#error-icon{
+	z-index:1000;
+	width:3%;
+	display:flex;
+	align-self: flex-end;
+	margin-bottom:-6%;
+	margin-right:2%;
+	visibility: hidden;
+}
+.submit{
+	background-color:hsl(154, 59%, 51%);
+	border:0;
+	outline:0;
+	padding:2%;
+	color:white;
+	cursor:pointer;
+	box-shadow: -1px 6px 5px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: -1px 6px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 6px 5px 0px rgba(0,0,0,0.75);
+}
+.submit:hover {
+    background: linear-gradient(270deg,white, hsl(154, 59%, 51%));
+    color:hsl(248, 32%, 49%);
+}
+
+@media (max-width:1200px) {
+
+	.form{
+		width:90%
+	}
+	.second{
+		width:80%
+	}
+	#text-container {
+		font-size:18px;
+    
+	}
+}
+	@media (max-width:700px) {
+		.main{
+			flex-direction:column;
+	}
+	.form{
+		width:90%
+	}
+	.second{
+		width:82%
+	}
+	#text-container {
+		font-size:18px;
+    
+	}
+}
